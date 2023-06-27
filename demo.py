@@ -5,7 +5,8 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     name = ["Kiran", "Deep", "Patcha"]
-    return render_template("index.html", content=name)
+    age = {"Kiran": 10, "Deep": 20, "Patcha": 40}
+    return render_template("index.html", content=name, age=age)
 
 @app.route("/redirect")
 def redirector():
